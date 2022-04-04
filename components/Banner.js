@@ -6,6 +6,7 @@ function Banner() {
     <div className='relative h-[300px] sm:h-[400px] lg:h-[500px]'>
       <Image 
       src="https://links.papareact.com/0fm"
+      alt='banner'
       layout='fill'
       objectFit='cover'
        />

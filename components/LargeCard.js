@@ -5,7 +5,7 @@ function LargeCard({title,image}) {
   return (
     <div className='cursor-pointer hover:scale-105 transition transform duration-300 ease-out'>
       <div className="relative h-60 w-60">
-        <Image className='rounded-xl' src={image} layout="fill" />
+        <Image alt={title} className='rounded-xl' src={image} layout="fill" />
       </div>
       <h3 className='text-2xl'>{title}</h3>
     </div>
