@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { format } from "date-fns";
 import { useRouter } from "next/dist/client/router";
 import InfoCard from "../components/InfoCard";
+import MapBox from "../components/MapBox";
 
 function Search({searchResult}) {
   const router = useRouter();
@@ -21,7 +22,7 @@ function Search({searchResult}) {
     <div>
       <Header placeholder={`${location} | ${range} | ${guests}`} />
       <main className="flex">
-        <section className="flex-grow pt-14 px-4">
+        <section className="flex-grow pt-14 ">
           <p className="text-xs">
             300+ stays - {range} - for {guests}{" "}
             {guests > 1 ? "guests" : "guest"}
@@ -52,6 +53,9 @@ function Search({searchResult}) {
               );
             })}
           </div>
+        </section>
+        <section className="hidden xl:flex xl:min-w-[600px] max-w-3xl mx-auto ">
+          <MapBox searchResults={searchResult} />
         </section>
       </main>
       <Footer />
